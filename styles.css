@@ -1,0 +1,169 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: #fbf2c4;
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+header {
+  height: 12rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  height: 8rem;
+}
+
+nav {
+  padding: 0 5rem;
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+
+.navs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  background-color: #c7522a;
+  border-radius: 15px;
+  height: 3rem;
+  padding: 1rem 0;
+}
+
+.nav {
+  margin: 0 1rem;
+  text-decoration: none;
+  cursor: pointer;
+  color: #fbf2c4;
+}
+
+.nav:hover {
+  color: #1a1916;
+}
+
+main {
+  padding: 1rem 5rem;
+}
+
+.promotion {
+  height: 15rem;
+  text-align: justify;
+  background-image: url("images/promo.jpg");
+  background-size: cover;
+  background-position: center;
+  border-radius: 15px;
+  margin: 2rem 0;
+}
+
+.overlay {
+  border-radius: 15px;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.37);
+}
+
+.overlay article {
+  height: 100%;
+  padding: 1rem;
+  color: #fbf2c4;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.overlay h2 {
+  font-family: "Playwrite PE", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.overlay p {
+  width: 75%;
+  font-size: 1.1rem;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.card {
+  background-color: #e5c185;
+  padding: 1.5rem;
+  text-align: justify;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card h4 {
+  color: #cc621c;
+  margin-bottom: 1rem;
+  font-family: "Playwrite PE", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.card h3 {
+  font-family: "Playwrite PE", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.card-image {
+  margin: 0 auto;
+  display: block;
+  height: 15rem;
+  width: 100%;
+  margin: 1rem 0;
+  border-radius: 15px;
+}
+
+.card p {
+  margin-bottom: 1rem;
+}
+
+.btn {
+  display: block;
+  margin-top: auto;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  background-color: #c7522a;
+  text-align: center;
+  color: #fbf2c4;
+  border-radius: 15px;
+}
+
+.btn:hover {
+  color: #1a1916;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 5rem;
+  height: 5rem;
+}
+
+.footer-logo {
+  margin-right: 5rem;
+  height: 3rem;
+  width: 5rem;
+}
