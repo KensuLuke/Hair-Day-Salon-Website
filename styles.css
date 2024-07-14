@@ -28,6 +28,7 @@ nav {
   position: sticky;
   top: 0;
   left: 0;
+  z-index: 1;
 }
 
 .navs {
@@ -57,6 +58,7 @@ main {
 }
 
 .promotion {
+  position: relative; /* Ensure overlay covers entire promotion section */
   height: 15rem;
   text-align: justify;
   background-image: url("images/promo.jpg");
@@ -69,7 +71,11 @@ main {
 .overlay {
   border-radius: 15px;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.37);
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.overlay:hover {
+  background-color: rgba(0, 0, 0, 0.6); /* Darker overlay on hover */
 }
 
 .overlay article {
@@ -108,6 +114,7 @@ main {
   border-radius: 15px;
   display: flex;
   flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card h4 {
@@ -154,6 +161,7 @@ main {
   color: #1a1916;
 }
 
+/* 
 footer {
   display: flex;
   justify-content: center;
@@ -166,4 +174,118 @@ footer {
   margin-right: 5rem;
   height: 3rem;
   width: 5rem;
+} */
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 2rem 5rem;
+  background-color: #c7522a;
+  color: #fbf2c4;
+}
+
+.footer-container h4 {
+  margin-bottom: 1rem;
+}
+
+.footer-about,
+.footer-links,
+.footer-contact,
+.footer-social {
+  flex: 1 1 200px;
+  margin: 1rem;
+}
+
+.footer-logo {
+  height: 3rem;
+  margin-bottom: 1rem;
+}
+
+.footer-text {
+  font-size: 0.9rem;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin: 0.5rem 0;
+}
+
+.footer-links ul li a {
+  color: #fbf2c4;
+  text-decoration: none;
+}
+
+.footer-links ul li a:hover {
+  color: #1a1916;
+  transition: color 0.3s ease;
+}
+
+.footer-contact p,
+.footer-contact a {
+  color: #fbf2c4;
+  text-decoration: none;
+}
+
+.footer-contact a:hover {
+  color: #1a1916;
+  transition: color 0.3s ease;
+}
+
+.footer-social a {
+  margin-right: 0.5rem;
+}
+
+.icon {
+  height: 2.5rem;
+  transition: transform 0.3s ease;
+}
+
+.shrink {
+  height: 2rem;
+}
+
+.icon:hover {
+  transform: scale(1.1);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 1rem 0;
+  background-color: #b3421a;
+}
+
+.nav:hover {
+  transition: color 0.3s ease;
+}
+
+.btn:hover {
+  color: #1a1916;
+  background-color: #b3421a; /* Darker shade for hover */
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px); /* Lift card slightly on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+}
+
+/* Responsive layout adjustments */
+@media (max-width: 1024px) {
+  .cards {
+    grid-template-columns: repeat(
+      2,
+      1fr
+    ); /* Two cards per row on smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .cards {
+    grid-template-columns: 1fr; /* One card per row on mobile screens */
+  }
 }
